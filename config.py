@@ -1,12 +1,18 @@
-import os
-from dotenv import load_dotenv
+"""File with data."""
 
+import os
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
+DEFAULT_PORT = 8000
+
 
 class Config:
-    HOST = os.getenv("HOST", "localhost")
-    PORT = os.getenv("PORT", 8000)
-    API_KEY = os.getenv("API_KEY", None)
-    URL = os.getenv("URL", None)
+    """A config class."""
+
+    host = os.getenv('HOST', 'localhost')
+    port = os.getenv('PORT', DEFAULT_PORT)
+    api_key = os.getenv('API_KEY', None)
+    url = os.getenv('URL', None)
